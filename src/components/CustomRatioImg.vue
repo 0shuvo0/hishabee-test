@@ -15,6 +15,7 @@ export default {
     position: relative;
     width: 100%;
     height: 0;
+    overflow: hidden;
 }
 .custom-ratio-img img {
     display: block;
