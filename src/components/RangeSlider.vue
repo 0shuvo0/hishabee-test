@@ -49,6 +49,7 @@ section.range-slider input {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    accent-color: #27AE60;
 }
 
 section.range-slider input::-webkit-slider-thumb {
@@ -66,6 +67,8 @@ section.range-slider input::-moz-range-thumb {
 section.range-slider input::-moz-range-track {
     position: relative;
     z-index: -1;
+    background: #fff;
+    border: none;
 }
 .range-vals{
     display: flex;

@@ -20,7 +20,7 @@ export default {
         RangeSlider
     },
     data: () => ({
-        isCollapsed: false
+        isCollapsed: true
     })
 }
 </script>
