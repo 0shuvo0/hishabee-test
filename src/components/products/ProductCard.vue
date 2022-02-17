@@ -15,7 +15,7 @@
                     </div>
                     <button class="btn">Add To Cart</button>
                 </div>
-                <button class="details-btn">
+                <button class="details-btn" @click="showDetails = true">
                     Details
                     <i class="bi-arrow-right"></i>
                 </button>
@@ -37,19 +37,24 @@
                 <span class="price-old">$300.00</span>
             </p>
         </div>
+        <ProductModal v-if="showDetails" @close="showDetails = false" />
     </div>
 </template>
 
 <script>
 import CustomRatioImg from "@/components/CustomRatioImg.vue"
+import ProductModal from "@/components/modal/ProductModal.vue"
+
 
 export default {
     props: ['id'],
     components: {
-        CustomRatioImg
+        CustomRatioImg,
+        ProductModal
     },
     data: () => ({
-        qty: 1
+        qty: 1,
+        showDetails: false
     })
 }
 </script>

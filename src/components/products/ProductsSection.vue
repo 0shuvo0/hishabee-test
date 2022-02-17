@@ -9,6 +9,9 @@
              :id="i"
             />
         </div>
+        <p class="text-center mt-2">
+            <button class="btn" style="width: 220px">Load Mode</button>
+        </p>
     </div>
 </template>
 

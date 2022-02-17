@@ -39,6 +39,17 @@ export default {
     opacity: 0.35;
     transition: opacity .2s;
     display: none;
+    animation: pop 0.3s linear;
+}
+@keyframes pop{
+    0%{
+        transform: scale(0);
+        opacity: .6;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .sidebar-btn:hover{
     opacity: 1;
