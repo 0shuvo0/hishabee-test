@@ -3,7 +3,7 @@
         <div class="product-img">
             <CustomRatioImg
             pt="110%"
-            :src="`/img/${id}.png`"
+            :src="`/img/${id % 9}.png`"
             />
             <div class="controls">
                 <div class="badge">New</div>

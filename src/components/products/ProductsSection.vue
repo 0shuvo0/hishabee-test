@@ -4,13 +4,17 @@
         <ProductsNav />
         <div class="products-container">
             <ProductCard
-             v-for="i in 9"
+             v-for="i in products"
              :key="i"
              :id="i"
             />
         </div>
-        <p class="text-center mt-2">
-            <button class="btn" style="width: 220px">Load Mode</button>
+        
+        <p class="text-center mt-2" v-if="products">
+            <button class="btn" style="width: 220px" @click="products += 9">Load Mode</button>
+        </p>
+        <p class="text-center mt-2" v-else>
+            <span class="spinner"></span>
         </p>
     </div>
 </template>
@@ -23,6 +27,14 @@ export default {
     components: {
         ProductsNav,
         ProductCard
+    },
+    data: () => ({
+        products: 0
+    }),
+    mounted(){
+        setTimeout(() => {
+            this.products = 9
+        }, 1000);
     }
 }
 </script>

@@ -48,30 +48,4 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
   margin-bottom: 2em;
 }
-
-@media(max-width: 968px){
-  .sidebar{
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    overflow: auto;
-    width: 300px;
-    z-index: 999;
-    padding: 3em 1em;
-    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
-    left: -100%;
-    transition: left .35s;
-  }
-  .sidebar-btn{
-    display: block !important;
-  }
-  .sidebar.active{
-    left: 0;
-  }
-  .hero-img > div{
-    padding-top: 60% !important;
-  }
-}
 </style>

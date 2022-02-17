@@ -18,7 +18,72 @@
                     </p>
                 </div>
                 <div class="info">
-                    info
+                    <div class="status">
+                        <span class="status-text">Status</span>
+                        <span class="status-value">In Stock</span>
+                    </div>
+                    <p class="product-name">
+                        Product full name here
+                    </p>
+                    <p class="rating">
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <span>10 reviews</span>
+                    </p>
+                    <p class="price">
+                        <span class="current">$59.00</span>
+                        <span class="previous">$69.00</span>
+                        <span class="vat">(+15% Vat Included)</span>
+                    </p>
+                    <p class="sell-count">20 Products sold in last 12 hours</p>
+                    <div class="qty-ctrl">
+                        <span class="qty-label">quantity</span>
+                        <div class="qty-ctrl-wrapper">
+                            <button class="qty-btn" @click="qty > 1 && qty--">
+                                <i class="bi-dash"></i>
+                            </button>
+                            <button class="qty-btn num">
+                                {{qty}}
+                            </button>
+                            <button class="qty-btn" @click="qty++">
+                                +
+                            </button>
+                        </div>
+                        <span class="qty-stock">Only 10 Item Left!</span>
+                    </div>
+                    <button class="btn block">Add to cart</button>
+                    <button class="btn block buy-now">Buy Now</button>
+                    <div class="nav flex-center">
+                        <div class="nav-item">
+                            <i class="bi-heart"></i>
+                            <span>Add to wishlist</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="bi-arrow-left-right"></i>
+                            <span>Add to compare</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="bi-share"></i>
+                            <span>Add to wishlist</span>
+                        </div>
+                    </div>
+                    <table class="info-table">
+                        <tr>
+                            <td>sku</td>
+                            <td>KE-008819</td>
+                        </tr>
+                        <tr>
+                            <td>category</td>
+                            <td>Food</td>
+                        </tr>
+                        <tr>
+                            <td>tags</td>
+                            <td>Food, Fruits, Vegetables</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -32,7 +97,10 @@ import CustomRatioImg from "@/components/CustomRatioImg.vue"
 export default {
     components: {
         CustomRatioImg
-    }
+    },
+    data: () => ({
+        qty: 1
+    })
 }
 </script>
 
@@ -60,6 +128,9 @@ export default {
     border-radius: 10px;
     animation: pop .5s;
     overflow: auto;
+}
+.modal::-webkit-scrollbar {
+    display: none;
 }
 .modal .modal-close{
     position: absolute;
@@ -97,5 +168,139 @@ export default {
     text-decoration: underline;
     display: inline-block;
     margin-left: .5em;
+}
+
+.info .status{
+    display: flex;
+    align-items: center;
+}
+.status .status-text{
+    text-transform: uppercase;
+    color: #BDBDBD;
+}
+.status .status-value{
+    color: #219653;
+    font-size: .85em;
+    display: inline-block;
+    margin-left: 2em;
+}
+.info .product-name{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: .5em 0;
+}
+.info .rating{
+    font-size: .85em;
+    color: #FABE50;
+}
+.info .rating span{
+    color: #4F4F4F;
+}
+
+.info .price{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: .5em;
+}
+.info .price span{
+    margin-left: 1em;
+}
+.info .price span:first-child{
+    margin-left: 0;
+}
+.info .price .current{
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+}
+.info .price .previous{
+    font-size: 1.5em;
+    color: #828282;
+    text-decoration: line-through;
+}
+.info .price .vat{
+    font-size: .9em;
+    color: #828282;
+}
+.info .sell-count{
+    color: #4F4F4F;
+    border-bottom: 1px solid #E0E0E0;
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+.info .qty-ctrl{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+.qty-ctrl .qty-label{
+    text-transform: uppercase;
+    color: #4F4F4F;
+}
+.qty-ctrl .qty-stock{
+    font-size: .9em;
+    color: #828282;
+}
+.qty-ctrl-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 0 1.5em;
+}
+.qty-ctrl-wrapper .qty-btn{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #BDBDBD;
+    background: transparent;
+    border-radius: 50%;
+    color: #0D0D0D;
+    font-size: 1.5em;
+}
+.qty-ctrl-wrapper .qty-btn.num{
+    background: #F2F2F2;
+    border: none;
+    margin: 0 .75em;
+    cursor: initial;
+}
+.info .btn{
+    margin-top: 1em;
+}
+.info .btn.buy-now{
+    background-color: #F2F2F2;
+    color: #4F4F4F;
+    font-weight: 600;
+}
+.info .nav{
+    margin-top: 1.25em;
+    color: #4F4F4F;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 1em;
+}
+.info .nav .nav-item{
+    margin: .25em 0;
+    cursor: pointer;
+}
+.nav-item i{
+    display: inline-block;
+    margin-right: .5em;
+}
+
+.info-table{
+    margin-top: 1.5em;
+}
+.info-table td{
+    padding-bottom: 1em;
+}
+.info-table tr td:first-child{
+    width: 7em;
+    color: #BDBDBD;
+    text-transform: uppercase;
+}
+.info-table tr td:nth-child(2){
+    color: #4F4F4F;
+    font-weight: 500;
 }
 </style>
