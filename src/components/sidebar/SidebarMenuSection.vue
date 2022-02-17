@@ -19,13 +19,13 @@
 
 <script>
 import menu from "@/data/menu.json"
-import SidebarMenuItem from "@/components/SidebarMenuItem.vue"
+import SidebarMenuItem from "@/components/sidebar/SidebarMenuItem.vue"
 export default {
     components: {
         SidebarMenuItem
     },
     data: () => ({
-        isCollapsed: true,
+        isCollapsed: false,
         menu
     })
 }
@@ -36,6 +36,7 @@ export default {
     border: 1px solid var(--primary-light);
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 2em;
 }
 
 .section--title{

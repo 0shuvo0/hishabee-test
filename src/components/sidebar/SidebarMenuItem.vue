@@ -38,7 +38,7 @@ export default {
     padding-inline: 0;
     padding-block: .75em;
     font-weight: 400;
-    font-size: .85em;
+    font-size: .9em;
 }
 .menu-item.submenu{
     border-left: 2px solid #E0E0E0;
@@ -61,7 +61,6 @@ export default {
     color: var(--primary-color); 
     padding: .25em 0;
     font-weight: 500;
-    font-size: .85em;
     margin-left: 1em;
 }
 .menu-item-text:hover{
