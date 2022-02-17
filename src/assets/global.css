@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    padding-inline: 5.5%;
+    padding-block: 3em;
+}
