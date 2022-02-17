@@ -24,8 +24,7 @@ export default {
   display: flex;
 }
 .sidebar{
-  background: red;
-  width: 23.65%;
+  min-width: 23.65%;
 
 }
 .main{

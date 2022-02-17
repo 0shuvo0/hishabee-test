@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Vegetables",
+        "icon": "🍅",
+        "childerns": [
+            "Carrots",
+            "Potatoes",
+            "Onions"
+        ]
+    },
+    {
+        "title": "Fruits",
+        "icon": "🍎",
+        "childerns": [
+            {
+                "title": "Green Fruits",
+                "childerns": [
+                    "Grapes"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Groceries",
+        "icon": "🧂",
+        "childerns": [
+            "Milk",
+            "Eggs",
+            "Bread"
+        ]
+    },
+    {
+        "title": "Meat",
+        "icon": "🐖",
+        "childerns": [
+            "Chicken",
+            "Beef",
+            "Pork"
+        ]
+    },
+    {
+        "title": "Fish",
+        "icon": "🐟",
+        "childerns": [
+            "Salmon",
+            "Tuna",
+            "Shrimp"
+        ]
+    },
+    {
+        "title": "Beverage",
+        "icon": "🍺",
+        "childerns": [
+            "Beer",
+            "Wine",
+            "Coffee"
+        ]
+    },
+    {
+        "title": "Dry Food",
+        "icon": "🥖",
+        "childerns": [
+            "Bread",
+            "Pasta",
+            "Noodles"
+        ]
+    }
+]
